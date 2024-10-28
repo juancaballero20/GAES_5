@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorro de Energía en el Hogar</title>
+    <link rel="stylesheet" href="/tps90/static/css/ahorro.css"> <!-- Asegúrate de que esta ruta sea correcta -->
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/tps90/static/images/Logo nahualt sin fondo (1).png" alt="Logo de la Empresa">
+                </a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="viveros.html">Viveros</a></li>
+                <li><a href="comunidad.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="icons">
+                <a href="#"><img src="/tps90/static/images/persona (1).png" alt="Seleccionar Idioma" class="icon-img"></a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Usuario</a>
+                    <div class="dropdown-content">
+                        <a href="registro.html" id="register-link">Registrarse</a>
+                        <a href="iniciar.html" id="login-link">Iniciar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Ahorro de Energía y Agua en el Hogar</h1>
+
+        <section class="calculadora-section">
+            <h2>Calculadora de Consumo</h2>
+            <div class="calculadora">
+                <form id="calculadora-form">
+                    <div class="form-group">
+                        <label for="consumo-agua">Consumo mensual de agua (m³):</label>
+                        <input type="number" id="consumo-agua" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consumo-luz">Consumo mensual de luz (kWh):</label>
+                        <input type="number" id="consumo-luz" required>
+                    </div>
+                    <button type="submit">Calcular ahorro potencial</button>
+                </form>
+                <div id="resultado-calculo" class="resultado hidden">
+                    <!-- Resultados se mostrarán aquí -->
+                </div>
+            </div>
+        </section>
+
+        <section class="consejos-section">
+            <h2>Consejos de Ahorro</h2>
+            <div class="consejos-grid">
+                
+                <!-- Consejo Iluminación -->
+                <div class="consejo-card" onclick="mostrarDetalles(this)">
+                    <h3>Iluminación</h3>
+                    <div class="consejo-content">
+                        <ul>
+                            <li>Usar bombillas LED de bajo consumo</li>
+                            <li>Aprovechar al máximo la luz natural</li>
+                            <li>Instalar sensores de movimiento para áreas poco usadas</li>
+                            <li>Apagar las luces cuando no sean necesarias</li>
+                        </ul>
+                        <div class="ahorro-estimado">
+                            Ahorro potencial: 30% en consumo de luz
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Consejo Agua -->
+                <div class="consejo-card" onclick="mostrarDetalles(this)">
+                    <h3>Ahorro de Agua</h3>
+                    <div class="consejo-content">
+                        <ul>
+                            <li>Instalar aireadores en los grifos para reducir el caudal</li>
+                            <li>Usar sistemas de recolección de agua de lluvia</li>
+                            <li>Reparar fugas en grifos y tuberías</li>
+                            <li>Optar por duchas más cortas y eficientes</li>
+                        </ul>
+                        <div class="ahorro-estimado">
+                            Ahorro potencial: 40% en consumo de agua
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Consejo Electrodomésticos -->
+                <div class="consejo-card" onclick="mostrarDetalles(this)">
+                    <h3>Electrodomésticos</h3>
+                    <div class="consejo-content">
+                        <ul>
+                            <li>Optar por electrodomésticos con certificación de eficiencia energética</li>
+                            <li>Desenchufar los aparatos que no estén en uso</li>
+                            <li>Utilizar lavadoras y lavavajillas en ciclos de carga completa</li>
+                            <li>Evitar el uso de secadoras y preferir el secado al aire libre</li>
+                        </ul>
+                        <div class="ahorro-estimado">
+                            Ahorro potencial: 20% en consumo energético
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Consejo Calefacción y Refrigeración -->
+                <div class="consejo-card" onclick="mostrarDetalles(this)">
+                    <h3>Calefacción y Refrigeración</h3>
+                    <div class="consejo-content">
+                        <ul>
+                            <li>Mantener la temperatura en un nivel eficiente: 20°C en invierno, 24°C en verano</li>
+                            <li>Aislar adecuadamente puertas y ventanas</li>
+                            <li>Usar ventiladores en lugar de aire acondicionado cuando sea posible</li>
+                            <li>Limpiar filtros de aire acondicionado y calefacción regularmente</li>
+                        </ul>
+                        <div class="ahorro-estimado">
+                            Ahorro potencial: 25% en costos de calefacción y refrigeración
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Consejo Energía Solar -->
+                <div class="consejo-card" onclick="mostrarDetalles(this)">
+                    <h3>Energía Solar</h3>
+                    <div class="consejo-content">
+                        <ul>
+                            <li>Instalar paneles solares para generar tu propia energía</li>
+                            <li>Usar calentadores solares de agua para reducir el uso de electricidad</li>
+                            <li>Optimizar la orientación de paneles solares para mayor eficiencia</li>
+                        </ul>
+                        <div class="ahorro-estimado">
+                            Ahorro potencial: Hasta un 50% en facturas de electricidad
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+
+        <section class="registro-consumo">
+            <h2>Registro de Consumo</h2>
+            <form id="registro-form">
+                <input type="month" id="mes" required>
+                <input type="number" placeholder="Consumo de agua (m³)" id="agua" required>
+                <input type="number" placeholder="Consumo de luz (kWh)" id="luz" required>
+                <button type="submit">Registrar</button>
+            </form>
+            <div id="grafica-consumo">
+                <!-- Aquí se mostrará la gráfica de consumo -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Sobre nosotros</h4>
+                    <ul>
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Misión</a></li>
+                        <li><a href="#">Valores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Ahorro de Energía</a></li>
+                        <li><a href="#">Consultoría</a></li>
+                        <li><a href="#">Instalaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Función para la calculadora
+        document.getElementById('calculadora-form').onsubmit = function(e) {
+            e.preventDefault();
+            const agua = document.getElementById('consumo-agua').value;
+            const luz = document.getElementById('consumo-luz').value;
+            
+            const ahorroAgua = (agua * 0.3).toFixed(2); // 30% de ahorro potencial
+            const ahorroLuz = (luz * 0.25).toFixed(2); // 25% de ahorro potencial
+            
+            const resultado = document.getElementById('resultado-calculo');
+            resultado.innerHTML = `
+                <h3>Ahorro Potencial Mensual</h3>
+                <p>Agua: ${ahorroAgua} m³</p>
+                <p>Luz: ${ahorroLuz} kWh</p>
+                <p>¡Implementando nuestros consejos podrías lograr estos ahorros!</p>
+            `;
+            resultado.classList.remove('hidden');
+        };
+
+        // Función para mostrar detalles de consejos
+        function mostrarDetalles(card) {
+            card.classList.toggle('expanded');
+        }
+
+        // Registro de consumo
+        document.getElementById('registro-form').onsubmit = function(e) {
+            e.preventDefault();
+            const mes = document.getElementById('mes').value;
+            const agua = document.getElementById('agua').value;
+            const luz = document.getElementById('luz').value;
+
+            // Guardar datos
+            const registros = JSON.parse(localStorage.getItem('registros') || '{}');
+            registros[mes] = { agua, luz };
+            localStorage.setItem('registros', JSON.stringify(registros));
+
+            actualizarGrafica();
+        };
+
+        function actualizarGrafica() {
+            // Aquí se podría implementar una visualización de datos
+            // usando una biblioteca de gráficos como Chart.js
+        }
+    </script>
+</body>
+</html>

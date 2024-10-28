@@ -1,0 +1,192 @@
+/* Estructura General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h1, h2 {
+    color: #44aa15;
+}
+
+p {
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+/* Menu */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+}
+
+.main-nav .logo img {
+    max-width: 100px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    color: #44aa15;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a img {
+    max-width: 30px;
+    margin-right: 20px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #44aa15;
+}
+
+/* Estilo de las tarjetas de reciclaje */
+.reciclaje-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.reciclaje-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reciclaje-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.reciclaje-card h3 {
+    color: #44aa15;
+    margin-bottom: 10px;
+}
+
+.reciclaje-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reciclaje-content ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.reciclaje-content ul li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #44aa15;
+}
+
+.reciclaje-card p {
+    color: #555;
+}
+
+.expanded .reciclaje-content {
+    display: block;
+}
+
+/* Consejos de Reciclaje */
+.consejos-reciclaje ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.consejos-reciclaje ul li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background-color: #44aa15;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}

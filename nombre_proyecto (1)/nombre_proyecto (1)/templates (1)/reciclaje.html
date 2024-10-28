@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso Correcto del Reciclaje</title>
+    <link rel="stylesheet" href="/nombre_proyecto/nombre_proyecto/static/css/reciclaje.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="/nombre_proyecto/nombre_proyecto/static/images/Logo nahualt sin fondo (1).png" alt="Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="index (1).html">Inicio</a></li>
+                <li><a href="catalogo (1).html">Catalogo</a></li>
+                <li><a href="viveros (1).html">Viveros</a></li>
+                <li><a href="comunidad (1).html">Blog</a></li>
+                <li><a href="contacto (1).html">Contacto</a></li>
+            </ul>
+            <div class="icons">
+                <a href="#"><img src="/nombre_proyecto/nombre_proyecto/static/images/persona (1).png" alt="Idioma"></a>
+                <div class="dropdown">
+                    <button class="dropbtn">Usuario</button>
+                    <div class="dropdown-content">
+                        <a href="registro (1).html">Registrarse</a>
+                        <a href="iniciar (1).html">Iniciar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Uso Correcto del Reciclaje</h1>
+
+        <section class="reciclaje-intro">
+            <h2>¿Qué es el reciclaje y por qué es importante?</h2>
+            <p>El reciclaje es el proceso de convertir materiales usados, que de otro modo serían desechados, en productos nuevos. Es importante porque reduce el volumen de desechos, ahorra energía y disminuye la contaminación.</p>
+        </section>
+
+        <section class="tipos-reciclaje">
+            <h2>Tipos de Residuos y Cómo Separarlos</h2>
+            <div class="reciclaje-grid">
+                <!-- Residuos Orgánicos -->
+                <div class="reciclaje-card" onclick="mostrarDetalles(this)">
+                    <h3>Caneca Verde (Residuos Orgánicos)</h3>
+                    <div class="reciclaje-content">
+                        <ul>
+                            <li>Cáscaras de frutas y verduras</li>
+                            <li>Restos de comida</li>
+                            <li>Hojas secas y ramas</li>
+                        </ul>
+                        <p>Estos residuos pueden convertirse en compost y devolver nutrientes al suelo.</p>
+                    </div>
+                </div>
+
+                <!-- Residuos Plásticos -->
+                <div class="reciclaje-card" onclick="mostrarDetalles(this)">
+                    <h3>Caneca Amarilla (Residuos Plásticos)</h3>
+                    <div class="reciclaje-content">
+                        <ul>
+                            <li>Botellas plásticas</li>
+                            <li>Envases de alimentos</li>
+                            <li>Bolsas de plástico</li>
+                        </ul>
+                        <p>Es importante lavar y secar estos residuos antes de desecharlos.</p>
+                    </div>
+                </div>
+
+                <!-- Residuos de Papel y Cartón -->
+                <div class="reciclaje-card" onclick="mostrarDetalles(this)">
+                    <h3>Caneca Azul (Papel y Cartón)</h3>
+                    <div class="reciclaje-content">
+                        <ul>
+                            <li>Cajas de cartón</li>
+                            <li>Revistas y periódicos</li>
+                            <li>Folletos y hojas de papel</li>
+                        </ul>
+                        <p>Debe evitarse mezclar con residuos húmedos o grasientos.</p>
+                    </div>
+                </div>
+
+                <!-- Residuos de Vidrio -->
+                <div class="reciclaje-card" onclick="mostrarDetalles(this)">
+                    <h3>Caneca Blanca (Residuos de Vidrio)</h3>
+                    <div class="reciclaje-content">
+                        <ul>
+                            <li>Botellas de vidrio</li>
+                            <li>Frascos de conservas</li>
+                            <li>Vidrios rotos</li>
+                        </ul>
+                        <p>Recuerda retirar las tapas y enjuagar los envases antes de reciclarlos.</p>
+                    </div>
+                </div>
+
+                <!-- Residuos Metálicos -->
+                <div class="reciclaje-card" onclick="mostrarDetalles(this)">
+                    <h3>Caneca Amarilla (Residuos de Metales)</h3>
+                    <div class="reciclaje-content">
+                        <ul>
+                            <li>Latas de bebidas</li>
+                            <li>Envases de conserva</li>
+                            <li>Aluminio y hojalata</li>
+                        </ul>
+                        <p>Estos residuos se pueden fundir y reutilizar en nuevos productos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="consejos-reciclaje">
+            <h2>Consejos para un Reciclaje Eficiente</h2>
+            <ul>
+                <li>Separa siempre los residuos en diferentes contenedores según su tipo.</li>
+                <li>Procura limpiar y secar los envases antes de reciclar.</li>
+                <li>No mezcles residuos reciclables con desechos orgánicos o peligrosos.</li>
+                <li>Utiliza puntos de reciclaje locales para materiales más complejos como pilas, electrónicos y aceites.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 - Conciencia Ambiental</p>
+    </footer>
+
+    <script>
+        // Función para mostrar y ocultar detalles
+        function mostrarDetalles(card) {
+            card.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
